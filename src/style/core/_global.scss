@@ -1,0 +1,47 @@
+
+input,button,textarea{
+	appearance: none !important;
+}
+* {
+	outline: 0 !important;
+}
+
+html {
+	height: 100%;
+}
+body{
+	margin: 0;
+	height: 100%;
+    background-color: $white !important;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+main {
+	flex: 1 0 auto;
+}
+footer {
+	flex: 0 0 auto;
+}
+.container {
+	@media (min-width: 1661px) {
+		max-width: 100%;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1121px !important;
+	}
+}
+a {
+  transition: all .3s ease-in-out;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+

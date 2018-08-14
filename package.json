@@ -1,0 +1,41 @@
+{
+  "name": "kulture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "node-sass": "^4.9.0",
+    "popper.js": "^1.14.4"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.1.3",
+    "browser-sync": "^2.24.4",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-install": "^1.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0",
+    "gulp.spritesmith": "^6.9.0",
+    "imagemin-pngquant": "^5.1.0",
+    "install": "^0.11.0",
+    "jquery": "^3.3.1",
+    "rimraf": "^2.6.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {}
+}
