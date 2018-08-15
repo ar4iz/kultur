@@ -474,12 +474,12 @@ html.hidden {
 
 .breadcrumbs {
   position: relative;
-  padding-left: 21px;
+  padding-left: 11px;
   display: block;
   width: 100%;
   margin-top: 30px;
   @include tablet-sm {
-    padding-left: 15px;
+    padding-left: 11px;
     margin-top: 50px;
   }
   .home {
@@ -521,6 +521,10 @@ html.hidden {
 .main_content {
   padding-left: 10px;
   padding-right: 40px;
+  @include tablet-sm {
+    padding-right: 10px;
+    padding-left: 0;
+  }
 }
 .article_title {
   h2 {
@@ -543,6 +547,10 @@ html.hidden {
   }
 }
 .secondary {
+  padding-left: 5px;
+  @include tablet-sm {
+    padding-left: 0;
+  }
   h3 {
     font-family: $open-font;
     color: #404040;
@@ -568,16 +576,12 @@ html.hidden {
     padding-top: 30px;
   }
 }
-.ftr_nav {
-  display: flex;
-}
-.ftr_menu {
-  width: 33.3%;
+.enp_menu {
   @include tablet-sm {
     display: none;
   }
 }
-.ftr_items {
+.enp_items {
   padding-left: 0;
   margin-bottom: 0;
   margin-top: 7px;
@@ -606,10 +610,9 @@ html.hidden {
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.46px;
 }
-.ftr_socials {
-  width: 33.3%;
+.enp_socials {
   display: flex;
   flex-direction: column;
   padding-left: 7px;
@@ -654,10 +657,9 @@ html.hidden {
     }
   }
 }
-.ftr_info {
-  width: 33.3%;
-  padding-left: 15px;
-  padding-right: 18px;
+.enp_info {
+  padding-left: 3px;
+  padding-right: 5px;
   @include tablet-sm {
     display: none;
   }
@@ -668,6 +670,8 @@ html.hidden {
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.3px;
+    margin-top: 15px;
+    margin-bottom: 0;
   }
 }
 .menuBtn {
