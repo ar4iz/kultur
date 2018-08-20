@@ -678,6 +678,9 @@ html.hidden {
       text-transform: uppercase;
       margin-bottom: 0;
       line-height: 26px;
+      a {
+        color: $text-color;
+      }
     }
   }
   .categories_post {
@@ -1028,6 +1031,9 @@ html.hidden {
 }
 .img_holder {
   padding-bottom: 12px;
+  @include mobile-extra {
+    text-align: center;
+  }
 }
 .external_link {
   font-style: italic;
