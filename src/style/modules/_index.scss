@@ -385,12 +385,12 @@ html.hidden {
   }
 }
 /*NEED UNCOMMIT*/
-/*.sticky {
+.sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
-}*/
+}
 .calendar_link {
   color: #2d2d2d;
   font-size: 15px;
@@ -521,9 +521,9 @@ html.hidden {
 }
 .main_content {
   padding-left: 10px;
-  //padding-right: 40px;
-  padding-right: 0; /* NEED DELETE */
-  margin-right: -33px; /* NEED DELETE*/
+  padding-right: 40px;
+  //padding-right: 0; /* NEED DELETE */
+  //margin-right: -33px; /* NEED DELETE*/
   @include tablet-sm {
     padding-right: 10px;
     padding-left: 0;
@@ -534,7 +534,7 @@ html.hidden {
 }
 .article_title {
   border-bottom: 2px solid $text-color;
-  padding-bottom: 19px;
+  padding-bottom: 17px;
   h2 {
     color: $text-color;
     font-family: $main-font;
@@ -550,20 +550,244 @@ html.hidden {
   color: $text-color;
   font-family: $open-font;
   font-size: 13px;
-  b {
+  line-height: 26px;
+  display: flex;
+  .dropdown {
+    margin-left: 4px;
+  }
+  .dropdown_filter {
     color: #2f2f2f;
+    font-weight: 700;
+    &:after {
+      display: none;
+    }
+  }
+}
+.news_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid $text-color;
+  li {
+    &:nth-child(n+3):nth-child(-n+6) {
+      .post-meta-time {
+        &:before {
+          background-color: #0c8d39;
+        }
+      }
+    }
+    &:nth-child(n+5):nth-child(-n+8) {
+      .string_new {
+        .post_information {
+          padding-top: 8px;
+          padding-bottom: 7px;
+        }
+      }
+    }
+    &:last-child {
+      .post-meta-time {
+        &:before {
+          background-color: #2795f3;
+        }
+      }
+    }
+  }
+}
+.string_new {
+  border-top: 2px solid $text-color;
+  &.open {
+    border-top: none;
+    .post_information {
+      padding-top: 6px;
+      padding-bottom: 7px;
+    }
+    .categories_post {
+      margin-top: -2px;
+    }
+    .post-meta-time {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 7px;
+        background-color: #fa7055;
+        margin-top: 0;
+      }
+      a {
+        font-size: 13px;
+        font-weight: 400;
+        color: $text-color;
+        font-family: $open-font;
+        text-decoration: none;
+        padding-left: 18px;
+      }
+    }
+  }
+  .post_information {
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 9px;
+    @include tablet-sm {
+      flex-wrap: wrap;
+    }
+  }
+  .post-meta-date {
+    padding-left: 11px;
+    width: 31.2%;
+    @include tablet-sm {
+      width: 100%;
+    }
+  }
+  .post-meta-time {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 7px;
+      background-color: #fa7055;
+      margin-top: 1px;
+    }
+    a {
+      font-size: 13px;
+      font-weight: 400;
+      color: $text-color;
+      font-family: $open-font;
+      text-decoration: none;
+      padding-left: 18px;
+    }
+  }
+  .string_post_title {
+    padding-right: 20px;
+    width: 40%;
+    @include tablet-sm {
+      width: 100%;
+    }
+    h3 {
+      color: $text-color;
+      font-family: $open-font;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      line-height: 26px;
+    }
+  }
+  .categories_post {
+    margin-top: 0;
+    width: 28.8%;
+    text-align: right;
+    @include tablet-sm {
+      width: 100%;
+      text-align: left;
+    }
+    a {
+      text-decoration: none;
+      color: $text-color;
+      font-family: $open-font;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+  .post_thumbnail {
+    position: relative;
+    img {
+      @include mobile-extra {
+        height: 100%;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: .1;
+      background: #000;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 13px 13px 0 13px;
+      border-color: #ffffff transparent transparent transparent;
+      left: 31.2%;
+      top: 0;
+      @include mobile {
+        left: 50%;
+      }
+    }
+  }
+  .read_more {
+    position: absolute;
+    padding: 35px 73px 35px 35px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    @include mobile {
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 .wrap_links {
   text-align: right;
   padding-top: 20px;
   padding-bottom: 6px;
+  @include mobile {
+    text-align: center;
+  }
   .link_to_page {
     max-width: 229px;
     width: 100%;
     padding: 3px 10px;
     text-align: center;
     display: inline-block;
+  }
+}
+.posts_news {
+  .new_item {
+    &:nth-child(3) {
+      .post-meta-date {
+        .post-meta-time {
+          &:before {
+            background-color: #0c8d39;
+          }
+        }
+      }
+    }
+    &:nth-child(4) {
+      .post-meta-date {
+        .post-meta-time {
+          &:before {
+            background-color: #2795f3;
+          }
+        }
+      }
+    }
+    &:nth-child(6) {
+      .post-meta-date {
+        .post-meta-time {
+          &:before {
+            background-color: #fa7055;
+          }
+        }
+      }
+    }
   }
 }
 .new_item {
@@ -662,7 +886,7 @@ html.hidden {
   }
   &.large_new {
     padding-top: 40px;
-    padding-bottom: 31px;
+    padding-bottom: 32px;
     @include mobile {
       flex-wrap: wrap;
     }
@@ -677,6 +901,10 @@ html.hidden {
       @include mobile {
         padding-right: 0;
         padding-bottom: 20px;
+      }
+      @include mobile-extra {
+        width: 100%;
+        margin: 0 auto;
       }
     }
     .new_content {
@@ -762,7 +990,7 @@ html.hidden {
 
 .secondary {
   padding-left: 5px;
-  margin-right: -30px; /* NEED DELETE */
+  //margin-right: -30px; /* NEED DELETE */
   @include tablet-sm {
     padding-left: 0;
   }
