@@ -1,0 +1,102 @@
+.top_list {
+  .menu-item {
+    &.current-menu-item {
+      background-color: #25974a;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 14px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        background-color: #25974a;
+        transform: translateY(100%);
+      }
+    }
+  }
+}
+.single_post_new {
+  padding-top: 17px;
+  .article_title {
+    border-bottom: none;
+    padding-bottom: 7px;
+    h2 {
+      font-family: $main-font;
+      font-size: 55px;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 19px;
+      line-height: 1;
+      letter-spacing: -1.2px;
+    }
+    p {
+      margin-bottom: 0;
+      b {
+        color: #404040;
+        font-size: 17px;
+        font-weight: 700;
+        font-family: $open-font;
+        line-height: 24px;
+        letter-spacing: -0.3px;
+      }
+    }
+  }
+  p {
+    color: #404040;
+    font-family: $open-font;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+}
+.bibliotek_aside {
+  border-bottom: none;
+  margin-bottom: -22px;
+  h2 {
+    margin-bottom: 0;
+  }
+  ul {
+    list-style: none;
+    padding-bottom: 3px;
+    padding-left: 0;
+    li {
+      font-family: $myriad-font;
+      font-weight: 700;
+      font-size: 15px;
+      color: $text-color;
+      letter-spacing: .5px;
+      border-bottom: 1px solid rgba(55, 55, 55, .2);
+      background-color: #f0eeec;
+      line-height: 40px;
+      padding-left: 15px;
+    }
+    ul {
+      li {
+        background-color: transparent;
+        padding-left: 0;
+        line-height: normal;
+        letter-spacing: 0;
+        position: relative;
+        &:before {
+          content: '-';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 21px;
+          font-size: 15px;
+          color: $text-color;
+        }
+        a {
+          font-family: $myriad-font;
+          font-weight: 400;
+          font-size: 15px;
+          color: $text-color;
+          line-height: 39px;
+          padding-left: 32px;
+        }
+      }
+    }
+  }
+}

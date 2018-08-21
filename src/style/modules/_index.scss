@@ -180,9 +180,10 @@ html.hidden {
   }
   &:before {
     content: '';
-    background: url("../img/search.png") no-repeat;
+    background: url("../img/spritesheet.png") no-repeat;
     width: 13px;
     height: 12px;
+    background-position: -97px 0;
     position: absolute;
     right: 6px;
     top: 50%;
@@ -190,9 +191,10 @@ html.hidden {
   }
   &.icons {
     &:before {
-      background: url("../img/close.png") no-repeat;
+      background: url("../img/spritesheet.png") no-repeat;
       width: 10px;
       height: 9px;
+      background-position: -25px 0;
       position: absolute;
       right: 6px;
       top: 50%;
@@ -429,9 +431,10 @@ html.hidden {
   &:before {
     content: '';
     position: absolute;
-    background: url("../img/calendar.png");
+    background: url("../img/spritesheet.png");
     width: 14px;
     height: 14px;
+    background-position: -11px 0;
     left: 25px;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -443,12 +446,13 @@ html.hidden {
 .top_list {
   list-style: none;
   display: flex;
-  margin-top: 7px;
+  margin-top: 0;
   margin-bottom: 0;
   padding-left: 4px;
-  height: 100%;
+  height: 53px;
   @include tablet-sm {
     display: none;
+    height: 100%;
   }
   .menu-item {
     border-right: 1px solid #1a1a1a;
@@ -509,9 +513,10 @@ html.hidden {
     &:before {
       content: '';
       position: absolute;
-      background: url("../img/nav.png") no-repeat;
+      background: url("../img/spritesheet.png") no-repeat;
       width: 10px;
       height: 8px;
+      background-position: -87px 0;
       text-decoration: none;
       left: 9px;
       top: 50%;
@@ -640,6 +645,7 @@ html.hidden {
     width: 31.2%;
     @include tablet-sm {
       width: 100%;
+      padding-left: 0;
     }
   }
   .post-meta-time {
@@ -668,6 +674,9 @@ html.hidden {
     padding-right: 20px;
     width: 40%;
     @include tablet-sm {
+      width: 50%;
+    }
+    @include mobile {
       width: 100%;
     }
     h3 {
@@ -688,6 +697,9 @@ html.hidden {
     width: 28.8%;
     text-align: right;
     @include tablet-sm {
+      width: 50%;
+    }
+    @include mobile {
       width: 100%;
       text-align: left;
     }
@@ -1082,16 +1094,18 @@ html.hidden {
   }
   .aside_facebook {
     &:before {
-      background: url("../img/fb_purple.png") no-repeat;
+      background: url("../img/spritesheet.png") no-repeat;
       width: 8px;
       height: 17px;
+      background-position: -43px 0;
     }
   }
   .aside_insta {
     &:before {
-      background: url("../img/insta_purple.png") no-repeat;
+      background: url("../img/spritesheet.png") no-repeat;
       width: 18px;
       height: 18px;
+      background-position: -69px 0;
       left: -5px;
     }
   }
@@ -1209,17 +1223,19 @@ html.hidden {
   .facebook_icon {
     margin-top: 8px;
     &:before {
-      background: url("../img/fb.png") no-repeat;
+      background: url("../img/spritesheet.png") no-repeat;
       width: 8px;
       height: 17px;
+      background-position: -35px 0;
     }
   }
   .instagram_icon {
     margin-top: 0;
     &:before {
-      background: url("../img/insta.png") no-repeat;
+      background: url("../img/spritesheet.png") no-repeat;
       width: 18px;
       height: 18px;
+      background-position: -51px 0;
     }
   }
 }
@@ -1293,9 +1309,10 @@ html.hidden {
     &::after{
       content: '';
       position: absolute;
-      background: url("../img/close.png") no-repeat;
+      background: url("../img/spritesheet.png") no-repeat;
       width: 10px;
       height: 9px;
+      background-position: -25px 0;
       top: 50%;
       right: -20px;
       transform: translate(-50%, -50%);
@@ -1343,9 +1360,10 @@ html.hidden {
           top: 20px;
           right: 15px;
           transform: translate(-50%, -50%);
-          background: url("../img/arrow.png") no-repeat;
+          background: url("../img/spritesheet.png") no-repeat;
           width: 11px;
           height: 7px;
+          background-position: 0 0;
         }
         &.active {
           &.menu-item-has-children {
@@ -1427,4 +1445,18 @@ html.hidden {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.sprite {
+  background-image: url(data:image/png;base64,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);
+  background-repeat: no-repeat;
+  display: block;
+}
+
+
+
+.sprite-search {
+  width: 13px;
+  height: 12px;
+  background-position: -97px 0;
 }
