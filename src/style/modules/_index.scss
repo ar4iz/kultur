@@ -535,6 +535,9 @@ html.hidden {
   }
   .article_wrap {
     padding-bottom: 143px;
+    @include mobile {
+      padding-bottom: 50px;
+    }
   }
 }
 .article_title {
@@ -1008,6 +1011,7 @@ html.hidden {
   //margin-right: -30px; /* NEED DELETE */
   @include tablet-sm {
     padding-left: 0;
+    padding-bottom: 50px;
   }
   h2 {
     font-family: $open-font;
@@ -1088,7 +1092,7 @@ html.hidden {
     &:before {
       content: '';
       position: absolute;
-      top: 0;
+      top: 2px;
       left: 0;
     }
   }
@@ -1106,6 +1110,14 @@ html.hidden {
       width: 18px;
       height: 18px;
       background-position: -69px 0;
+      left: -5px;
+    }
+  }
+  .aside_tw {
+    &:before {
+      background: url("../img/twitter_purple.png") no-repeat;
+      width: 19px;
+      height: 16px;
       left: -5px;
     }
   }

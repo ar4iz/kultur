@@ -61,5 +61,9 @@
             }, 800);
             return false;
         });
+        $('.printBtn').on('click', function (e) {
+            e.preventDefault();
+            window.print();
+        });
     });
 })(jQuery);

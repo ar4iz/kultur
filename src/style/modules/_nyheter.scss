@@ -1,0 +1,203 @@
+.single_article {
+  .article_title {
+    border: none;
+    padding-bottom: 25px;
+  }
+  h2 {
+    font-size: 55px;
+    line-height: 1;
+    color: #404040;
+    letter-spacing: -1.1px;
+  }
+  .post-meta-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .post-meta-time {
+      padding-left: 17px;
+      &:before {
+        top: 10px;
+        left: 0;
+        background-color: #8040bc;
+        width: 8px;
+        height: 7px;
+      }
+      a {
+        color: #404040;
+      }
+    }
+  }
+  .post_image {
+    padding-bottom: 10px;
+  }
+  figcaption {
+    color: #656565;
+    font-family: $open-font;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+  }
+  .news_wrapper {
+    h2 {
+      color: #404040;
+      font-size: 35px;
+      font-family: $main-font;
+      text-transform: uppercase;
+      letter-spacing: -0.19px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-bottom: 25px;
+      letter-spacing: -0.06px;
+    }
+    b {
+      display: block;
+      font-family: $open-font;
+      font-size: 17px;
+      letter-spacing: -0.5px;
+      line-height: 23px;
+      a {
+        font-size: 17px;
+        color: #4211b1;
+        line-height: 24px;
+      }
+    }
+    .details_information {
+      padding-top: 18px;
+      .details_img {
+        padding-bottom: 22px;
+      }
+      h3 {
+        color: #404040;
+        font-family: $main-font;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: -0.1px;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      h4 {
+        color: #404040;
+        font-family: $open-font;
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 9px;
+        margin-bottom: 5px;
+      }
+    }
+    .share_socials {
+      height: 49px;
+      background-color: $text-color;
+      color: $white;
+      font-family: $open-font;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 54px;
+      margin-right: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3px 21px 0;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+.share_links {
+  .at-share-tbx-element {
+    .at-share-btn {
+      margin: 0 8px 0 0 !important;
+    }
+  }
+  .at-svc-facebook {
+    .at-icon-wrapper {
+      height: 24px !important;
+      .at-icon-facebook {
+        height: 21px !important;
+      }
+    }
+     }
+  .at-svc-twitter {
+    .at-icon-wrapper {
+      line-height: 24px !important;
+      height: 28px !important;
+      width: 22px !important;
+      .at-icon-twitter {
+        width: 24px !important;
+        height: 24px !important;
+      }
+    }
+  }
+}
+.post-meta-date {
+  .post-meta-time {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+    }
+    a {
+      span {
+        font-size: 13px;
+        font-family: $open-font;
+      }
+    }
+  }
+}
+.printBtn {
+  background: url("../img/printer_black.png") no-repeat;
+  width: 20px;
+  height: 17px;
+  border: none;
+  margin-top: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.printLogo {
+  background-color: #000;
+  padding: 15px;
+  display: none;
+}
+@media print {
+  .printLogo {
+    display: inline-block;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .breadcrumbs {
+    margin-top: 5px;
+  }
+  .single_article h2 {
+    margin-top: 0;
+  }
+  header, .printBtn, .section-intro, .top_nav, .right_menu, .secondary, footer {display: none;}
+  .post_image {
+    figure {margin-bottom: 0;}
+    img {width: 50%;}
+  }
+  .single_article .news_wrapper p {
+    margin-bottom: 10px;
+  }
+  .details_information h4 {
+    page-break-before: always;
+  }
+  .details_img img {
+    width: 50%;
+  }
+  .single_article .news_wrapper .share_socials {
+    display: none;
+  }
+}
+
+.current-cat {
+  background-color: #f0eeec;
+  a {
+    font-family: $open-font;
+    font-size: 15px;
+    font-weight: 700;
+    color: $text-color;
+  }
+}
