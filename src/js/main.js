@@ -65,5 +65,12 @@
             e.preventDefault();
             window.print();
         });
+
+        if ($('.calendar_link').hasClass('active')) {
+            $('.active_line').slideDown();
+        } else {
+            $('.active_line').slideUp();
+        }
+
     });
 })(jQuery);

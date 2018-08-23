@@ -5,7 +5,7 @@ html.hidden {
 .header {
   position: relative;
   width: 100%;
-  @include tablet-sm {
+  @include mobile {
     position: fixed;
     width: 100%;
     top: 0;
@@ -41,6 +41,10 @@ html.hidden {
   @include tablet-sm {
     flex-wrap: nowrap;
     height: 47px;
+    align-items: baseline;
+  }
+  @include mobile {
+    align-items: normal;
   }
 }
 .logo_wrapper {
@@ -54,8 +58,10 @@ html.hidden {
   }
   @include tablet-sm {
     padding-left: 0;
-    max-width: none;
     align-items: center;
+  }
+  @include mobile {
+    max-width: none;
   }
 }
 .site_name {
@@ -67,7 +73,7 @@ html.hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  @include tablet-sm {
+  @include mobile {
     max-width: 21.4%;
     padding-top: 0;
     height: 47px;
@@ -89,7 +95,7 @@ html.hidden {
 .logo_wrap {
   margin-left: 14px;
   padding-top: 18px;
-  @include tablet-sm {
+  @include mobile {
     max-width: 119px;
     padding-top: 0;
     margin-left: 31px;
@@ -108,6 +114,9 @@ html.hidden {
     padding-left: 15px;
     padding-right: 40px;
   }
+  @include tablet-sm {
+    padding-right: 20px;
+  }
 }
 .menu-list {
   list-style: none;
@@ -115,11 +124,17 @@ html.hidden {
   margin-top: 0;
   padding-left: 0;
   @include tablet-sm {
+    padding-right: 15px;
+  }
+  @include mobile {
     display: none;
   }
   .menu-item {
     padding: 0 15px;
     height: 36px;
+    @include tablet-sm {
+      padding: 0 10px;
+    }
     a {
       text-decoration: none;
       color: $disactive;
@@ -151,6 +166,9 @@ html.hidden {
     margin-top: 8px;
     max-width: 450px;
     width: 100%;
+    @include tablet-sm {
+      padding-right: 30px;
+    }
     .search-field {
       width: 100%;
     }
@@ -176,6 +194,12 @@ html.hidden {
   margin-top: 7px;
   padding: 0 15px;
   @include tablet-sm {
+    width: 18px;
+    padding: 0;
+    font-size: 0;
+    border: none;
+  }
+  @include mobile {
     display: none;
   }
   &:before {
@@ -188,6 +212,12 @@ html.hidden {
     right: 6px;
     top: 50%;
     transform: translate(-50%, -50%);
+    @include tablet-sm {
+      background: url("../img/search white.png") no-repeat;
+      width: 18px;
+      height: 18px;
+      right: 0;
+    }
   }
   &.icons {
     &:before {
@@ -205,6 +235,9 @@ html.hidden {
     border: 2px solid $white;
     color: $white;
     text-decoration: none;
+    @include tablet-sm {
+      border: none;
+    }
   }
 }
 .search-field {
@@ -243,7 +276,7 @@ html.hidden {
   height: 398px;
   position: relative;
   overflow: hidden;
-  @include tablet-sm {
+  @include mobile {
     display: none;
   }
   .view_slider {
@@ -382,7 +415,7 @@ html.hidden {
   height: 53px;
   display: flex;
   align-items: center;
-  @include tablet-sm {
+  @include mobile {
     height: 47px;
   }
 }
@@ -418,15 +451,17 @@ html.hidden {
 
   }
   @include tablet-sm {
-    position: absolute;
-    top: 0;
-    right: 46px;
     z-index: 12;
     max-width: 38px;
     height: 47px;
     margin-left: 0;
     padding-left: 0;
     font-size: 0;
+  }
+  @include mobile {
+    position: absolute;
+    top: 0;
+    right: 46px;
   }
   &:before {
     content: '';
@@ -450,7 +485,7 @@ html.hidden {
   margin-bottom: 0;
   padding-left: 4px;
   height: 53px;
-  @include tablet-sm {
+  @include mobile {
     display: none;
     height: 100%;
   }
@@ -473,6 +508,9 @@ html.hidden {
       line-height: 24px;
       text-decoration: none;
       padding: 0 15px;
+      @include tablet-sm {
+        padding: 0 9px;
+      }
     }
   }
 }
@@ -484,8 +522,11 @@ html.hidden {
   width: 100%;
   margin-top: 30px;
   @include tablet-sm {
+    margin-top: 20px;
+  }
+  @include mobile {
     padding-left: 11px;
-    margin-top: 50px;
+    margin-top: 60px;
   }
   .home {
     color: $text-color;
@@ -535,7 +576,7 @@ html.hidden {
   }
   .article_wrap {
     padding-bottom: 143px;
-    @include mobile {
+    @include tablet-sm {
       padding-bottom: 50px;
     }
   }
@@ -1169,7 +1210,7 @@ html.hidden {
   }
 }
 .enp_menu {
-  @include tablet-sm {
+  @include mobile {
     display: none;
   }
 }
@@ -1254,7 +1295,7 @@ html.hidden {
 .enp_info {
   padding-left: 3px;
   padding-right: 5px;
-  @include tablet-sm {
+  @include mobile {
     display: none;
   }
   p {
@@ -1273,7 +1314,7 @@ html.hidden {
   margin-right: 16px;
   padding: 16px 0;
   display: block;
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     display: none;
   }
   &__item{
@@ -1343,6 +1384,7 @@ html.hidden {
       }
     }
     .calendar_link {
+      background-color: #9c9c9c;
       color: #2f2f2f;
       font-family: $myriad-font;
       font-size: 25px;
@@ -1356,6 +1398,10 @@ html.hidden {
       justify-content: start;
       &:before {
         left: 18px;
+        background: url("../img/spritesheet.png");
+        width: 14px;
+        height: 14px;
+        background-position: -11px 0;
       }
     }
     .top_list {
@@ -1366,11 +1412,12 @@ html.hidden {
       .menu-item {
         border: none;
         position: relative;
+        padding-left: 15px;
         &:before {
           content: '';
           position: absolute;
           top: 20px;
-          right: 15px;
+          right: 30px;
           transform: translate(-50%, -50%);
           background: url("../img/spritesheet.png") no-repeat;
           width: 11px;
@@ -1388,6 +1435,7 @@ html.hidden {
             flex-direction: column;
             padding-left: 0;
             .menu-item {
+              padding-left: 0;
               a {
                 color: $white;
                 font-size: 15px;
@@ -1411,6 +1459,7 @@ html.hidden {
           font-family: $main-font;
           line-height: 40px;
           text-transform: uppercase;
+          padding: 0 15px;
         }
       }
     }
@@ -1422,6 +1471,7 @@ html.hidden {
       flex-direction: column;
       margin-bottom: 0;
       .menu-item {
+        padding: 0 15px;
         a {
           color: #e4e4e4;
           font-family: $open-font;
@@ -1464,11 +1514,46 @@ html.hidden {
   background-repeat: no-repeat;
   display: block;
 }
-
-
-
 .sprite-search {
   width: 13px;
   height: 12px;
   background-position: -97px 0;
+}
+
+
+.all_pages{
+  position: fixed;
+  top: 20%;
+  right: 0;
+  z-index: 101;
+  &:hover{
+    ul{
+      right: 0;
+    }
+  }
+  .page_point{
+    width: 40px;
+    height: 15px;
+    background: #00d2ff;
+    cursor: pointer;
+  }
+  ul{
+    background: #00D2FF;
+    padding: 15px 20px;
+    position: absolute;
+    top: 100%;
+    width: 200px;
+    right: -200px;
+    transition: .4s;
+    max-height: 450px;
+    overflow-y: auto;
+    li{
+      list-style: none;
+      margin-bottom: 15px;
+      font-size: 16px;
+      a{
+        color: #fff;
+      }
+    }
+  }
 }
