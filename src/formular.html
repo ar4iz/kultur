@@ -96,7 +96,7 @@
 			<div class="row align-items-center">
 				<a href="#" class="calendar_link">Kulturkalender</a>
 				<ul class="top_list">
-					<li class="menu-item current-menu-item">
+					<li class="menu-item">
 						<a href="#">Bibliotek</a>
 					</li>
 					<li class="menu-item">
@@ -111,7 +111,7 @@
 					<li class="menu-item">
 						<a href="#">Kulturmiljö</a>
 					</li>
-					<li class="menu-item">
+					<li class="menu-item current-menu-item">
 						<a href="#">Kulturskolan</a>
 					</li>
 					<li class="menu-item">
@@ -130,28 +130,62 @@
 					<div class="breadcrumbs">
 						<span>
 							<a href="/" class="home">
-								<span>Bibliotek</span>
+								<span>Kulturskolan</span>
 							</a>
 						</span>
 						<span class="sep"></span>
-						<span class="current"></span>
+						<span class="current">Anmälan till våra kurser</span>
 					</div>
 				</div>
 				<div class="col-lg-8 pr-0">
 					<div class="main_content">
-						<div class="article_wrap">
+						<div class="article_wrap form_tabs">
 							<div class="article_title">
-								<h2>kommande event</h2>
-								<div class="filter_name">Filter:
-									<div class="dropdown">
-										<a class="dropdown-toggle dropdown_filter" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											Bibliotek
-										</a>
-										<div class="dropdown-menu">
-											<a class="dropdown-item" href="#">Lorem 1</a>
-											<a class="dropdown-item" href="#">Lorem 2</a>
-											<a class="dropdown-item" href="#">Lorem 3</a>
+								<h2>Anmälan till våra kurser</h2>
+							</div>
+							<div class="formular_wrap">
+								<h3>VÄLJ AKTIVITET:</h3>
+								<div class="active_formular">
+									<nav>
+										<div class="nav nav-tabs" id="nav-tab" role="tablist">
+											<a class="nav-item nav-link active" id="nav-dans-tab" data-toggle="tab" href="#nav-dans" role="tab" aria-controls="nav-dans" aria-selected="true">Dans</a>
+											<a class="nav-item nav-link" id="nav-sang-tab" data-toggle="tab" href="#nav-sang" role="tab" aria-controls="nav-sang" aria-selected="false">Sång & Instrument</a>
+											<a class="nav-item nav-link" id="nav-film-tab" data-toggle="tab" href="#nav-film" role="tab" aria-controls="nav-film" aria-selected="false">Teater & Film</a>
 										</div>
+									</nav>
+									<div class="tab-content" id="nav-tabContent">
+										<div class="tab-pane fade show active" id="nav-dans" role="tabpanel" aria-labelledby="nav-dans-tab">
+											<div class="form_steps">
+												<div class="form_title">
+													<h3>1. välj plats och tid</h3>
+												</div>
+												<div class="form_content">
+													<div class="form-group">
+														<span><strong>Show/Streetjazz</strong></span>
+														<span>Lokal: Dansstudion, Kungsängen</span>
+														<span>
+														<input type="text" class="form-control form_text" name="locate" placeholder="Tisdagar kl 16:00 - 16:45, 4-5 år">
+													</span>
+													</div>
+													<div class="form-group">
+														<span><strong>Show/Streetjazz</strong></span>
+														<span>Lokal: Danssalen Brohuset</span>
+														<span>
+														<input type="text" class="form-control form_text" name="locate" placeholder="Välj tid & åldersgrupp">
+													</span>
+													</div>
+													<div class="form-group">
+														<span><strong>Show/Streetjazz</strong></span>
+														<span>Lokal: Tjustaskolan gymnastiksal</span>
+														<span>
+														<input type="text" class="form-control form_text" name="locate" placeholder="Välj tid & åldersgrupp">
+													</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="nav-sang" role="tabpanel" aria-labelledby="nav-sang-tab">...</div>
+										<div class="tab-pane fade" id="nav-film" role="tabpanel" aria-labelledby="nav-film-tab">...</div>
 									</div>
 								</div>
 							</div>

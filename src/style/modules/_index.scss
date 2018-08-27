@@ -523,6 +523,7 @@ html.hidden {
   margin-top: 30px;
   @include tablet-sm {
     margin-top: 20px;
+    padding-left: 0;
   }
   @include mobile {
     padding-left: 11px;
