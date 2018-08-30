@@ -56,11 +56,11 @@
 				<a href="#" class="header_btn">SÖK</a>
 			</div>
 		</div>
-		<div class="menuBtn">
+		<a href="#" class="menuBtn">
 			<div class="menuBtn__item menuBtn__item_1"></div>
 			<div class="menuBtn__item menuBtn__item_2"></div>
 			<div class="menuBtn__item menuBtn__item_3"></div>
-		</div>
+		</a>
 	</div>
 	<section class="section-intro">
 		<div class="view_slider">
@@ -171,7 +171,7 @@
 									</nav>
 									<div class="tab-content" id="nav-tabContent">
 										<div class="tab-pane fade show active" id="nav-dans" role="tabpanel" aria-labelledby="nav-dans-tab">
-											<div class="form_steps">
+											<div class="form_steps on_focus">
 												<div class="form_title">
 													<h3>1. välj plats och tid</h3>
 												</div>
@@ -199,185 +199,135 @@
 													</div>
 												</div>
 											</div>
+											<div class="form_steps step_2">
+												<div class="form_title">
+													<h3>2. elevens uppgifter</h3>
+												</div>
+												<div class="form_content">
+													<div class="form-group">
+														<span><strong>Elevens namn <span class="required">*</span></strong></span>
+														<span>
+														<input type="text" class="form-control form_text" name="username" placeholder="Förnamn Efternamn">
+													</span>
+													</div>
+													<div class="form-group mb_lg">
+														<span><strong>Personnummer <span class="required">*</span></strong></span>
+														<span>
+														<input type="text" class="form-control form_text" name="locate" placeholder="XXX-XX-XX">
+													</span>
+													</div>
+													<div class="form-group">
+														<span><strong>Elevens adress <span class="required">*</span></strong></span>
+														<span>
+														<input type="email" class="form-control form_text" name="locate">
+													</span>
+													</div>
+													<div class="form-group mb_lg">
+														<div class="number_wrap">
+															<div class="mask_num">
+																<span><strong>Postnummer</strong></span>
+																<span>
+																<input type="text" class="form-control form_text" name="postnum" value="111 22">
+															</span>
+															</div>
+															<div class="other_num">
+																<span><strong>Postort</strong></span>
+																<span>
+																<input type="text" class="form-control form_text" name="postort">
+															</span>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<span><strong>Elevens skola & klass</strong></span>
+														<span>
+															<input type="text" class="form-control form_text" name="skola">
+														</span>
+													</div>
+													<div class="form-group">
+														<span><strong>Målsmans epostadress</strong></span>
+														<span>
+															<input type="text" class="form-control form_text" name="epostadress">
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="form_steps step_3">
+												<div class="form_title">
+													<h3>3. målsmans uppgifter</h3>
+												</div>
+												<div class="form_content">
+													<div class="form-group">
+														<span><strong>Målsmans namn <span class="required">*</span></strong></span>
+														<span>
+														<input type="text" class="form-control form_text" name="username" placeholder="Förnamn Efternamn">
+													</span>
+													</div>
+													<div class="form-group">
+														<span><strong>Målsmans personnummer <span class="required">*</span></strong></span>
+														<span>
+														<input type="text" class="form-control form_text" name="locate" placeholder="XXX-XX-XX">
+													</span>
+														<p class="error_message">Ogiltigt personnummer</p>
+													</div>
+													<div class="form-group">
+														<span><strong>Målsmans telefonnummer</strong></span>
+														<span>
+														<input type="text" class="form-control form_text" name="telephone">
+													</span>
+													</div>
+													<div class="form-group">
+														<span><strong>Målsmans e-postadress <span class="required">*</span></strong></span>
+														<span>
+														<input type="email" class="form-control form_text" name="e-post">
+													</span>
+													</div>
+													<div class="form-group add_btn">
+														<a href="#" class="btn_dark">+ lägg till målsman</a>
+													</div>
+												</div>
+											</div>
+											<div class="form_footer">
+												<div class="result_content">
+													<h3>Du har valt:</h3>
+													<p class="local_value_1">Show/Streetjazz</p>
+													<p class="local_value_1">Lokal: Danssal Brohuset</p>
+													<p class="local_value_1">Tisdagar kl 16:00 - 16:45, 4-5 år</p>
+												</div>
+												<div class="pay_info">
+													<div class="termins_pay">
+														<h3>Terminsavgift:</h3>
+														<p>900kr</p>
+													</div>
+													<div class="termins_rights">
+														<p><strong>OBS.</strong> Avgift debiteras alla placerade elever som inte sagt upp sin plats till Kulturskolans expedition vid terminstart.
+														</p>
+													</div>
+												</div>
+												<div class="form-group check">
+													<label>
+														<input type="radio" class="radio" name="agree" value="Gästspel" checked>
+														<span class="radio-custom"></span>
+														<span class="label">Jag godkänner villkoren.</span>
+													</label>
+												</div>
+												<div class="form-group check">
+													<label>
+														<input type="radio" class="radio" name="agree" value="Gästspel" checked>
+														<span class="radio-custom"></span>
+														<span class="label">Ja, mitt barn får vara med på hemsidans bilder. (Ej obligatoriskt.)</span>
+													</label>
+												</div>
+												<div class="form-group send_submit">
+													<input type="submit" value="SKICKA anmälan" class="btn_dark">
+													<p class="success_message">Din anmälan har skickats!</p>
+												</div>
+											</div>
 										</div>
 										<div class="tab-pane fade" id="nav-sang" role="tabpanel" aria-labelledby="nav-sang-tab">...</div>
 										<div class="tab-pane fade" id="nav-film" role="tabpanel" aria-labelledby="nav-film-tab">...</div>
 									</div>
 								</div>
-							</div>
-							<div class="news_wrapper">
-								<ul class="news_list">
-									<li>
-										<div class="string_new open">
-											<div class="post_information">
-												<div class="post-meta-date">
-													<span class="post-meta-time">
-														<a href="#">
-															<span>Tis 07 Feb, 12:00</span>
-														</a>
-													</span>
-												</div>
-												<div class="string_post_title">
-													<h3><a href="#">föreläsning: bo eriksson</a></h3>
-												</div>
-												<div class="categories_post">
-													<a href="#">Kulturhuset</a>, <a href="#">Workshophallen</a>
-												</div>
-											</div>
-											<div class="post_thumbnail">
-												<img src="../img/post_1.jpg" alt="">
-												<div class="read_more">
-													<a href="#" class="btn_slide btn_link">läs mer</a>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="string_new">
-											<div class="post_information">
-												<div class="post-meta-date">
-														<span class="post-meta-time">
-															<a href="#">
-																<span>Mån 20 Jan, 20:00</span>
-															</a>
-														</span>
-												</div>
-												<div class="string_post_title">
-													<h3><a href="#">Kroppar i rörelse</a></h3>
-												</div>
-												<div class="categories_post">
-													<a href="#">Brohuset</a>, <a href="#">Konstkuben</a>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="string_new">
-											<div class="post_information">
-												<div class="post-meta-date">
-														<span class="post-meta-time">
-															<a href="#">
-																<span>Ons 22 Jan, 18:00</span>
-															</a>
-														</span>
-												</div>
-												<div class="string_post_title">
-													<h3><a href="#">Bokcirkel för unga</a></h3>
-												</div>
-												<div class="categories_post">
-													<a href="#">Kulturhuset</a>, <a href="#">Stora Scenen</a>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="string_new">
-											<div class="post_information">
-												<div class="post-meta-date">
-														<span class="post-meta-time">
-															<a href="#">
-																<span>Fre 24 Jan, 20:00</span>
-															</a>
-														</span>
-												</div>
-												<div class="string_post_title">
-													<h3><a href="#">Bokcirkel för unga</a></h3>
-												</div>
-												<div class="categories_post">
-													<a href="#">Brohuset</a>, <a href="#">Caféträffen</a>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="string_new">
-											<div class="post_information">
-												<div class="post-meta-date">
-														<span class="post-meta-time">
-															<a href="#">
-																<span>Tis 28 Jan, 13:40</span>
-															</a>
-														</span>
-												</div>
-												<div class="string_post_title">
-													<h3><a href="#">Bokcirkel för unga</a></h3>
-												</div>
-												<div class="categories_post">
-													<a href="#">Brohuset</a>, <a href="#">Caféträffen</a>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="string_new">
-											<div class="post_information">
-												<div class="post-meta-date">
-														<span class="post-meta-time">
-															<a href="#">
-																<span>Lör 04 Jan, 20:00</span>
-															</a>
-														</span>
-												</div>
-												<div class="string_post_title">
-													<h3><a href="#">Bokcirkel för unga</a></h3>
-												</div>
-												<div class="categories_post">
-													<a href="#">Kulturhuset</a>, <a href="#">Workshophallen</a>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="string_new">
-											<div class="post_information">
-												<div class="post-meta-date">
-														<span class="post-meta-time">
-															<a href="#">
-																<span>Tis 07 Jan, 12:00</span>
-															</a>
-														</span>
-												</div>
-												<div class="string_post_title">
-													<h3><a href="#">Bläckets historia</a></h3>
-												</div>
-												<div class="categories_post">
-													<a href="#">Kulturhuset</a>, <a href="#">Stora scenen</a>
-												</div>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="string_new">
-											<div class="post_information">
-												<div class="post-meta-date">
-														<span class="post-meta-time">
-															<a href="#">
-																<span>Tis 07 Jan, 15:00</span>
-															</a>
-														</span>
-												</div>
-												<div class="string_post_title">
-													<h3><a href="#">Papperskonst av Eva Limaue</a></h3>
-												</div>
-												<div class="categories_post">
-													<a href="#">Brohuset</a>, <a href="#">Konstkuben</a>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<div class="wrap_links">
-								<a href="#" class="btn_dark link_to_page">Gå till kulturkalendern</a>
-							</div>
-							<div class="single_post_new">
-								<div class="article_title">
-									<h2>Om biblioteket</h2>
-									<p><b>Välkommen till Upplands-Bro bibliotek - en plats för alla!</b></p>
-								</div>
-								<p>I Upplands-Bro finns det två bibliotek - i Kulturhuset i Kungsängens centrum och i Brohuset i Bro centrum. Här kan du låna böcker, tidskrifter, ljudböcker, filmer, musik och TV-spel. Du kan även läsa dagstidningar och använda internet.</p>
-								<p>Mer information om bibliotekets service hittar du via länkarna till höger. I evenemangskalendern här nedan kan du läsa om allt som händer på biblioteket. Ta med barnen på sagostund, delta i en bokcirkel eller lyssna på författarsamtal.</p>
-								<p>Missa inte våra extra aktivteter i vår med anmälan! </p>
 							</div>
 						</div>
 					</div>
@@ -482,6 +432,8 @@
 				<li><a href="index.html">Index</a></li>
 				<li><a href="bibliotek.html">Bibliotek</a></li>
 				<li><a href="event.html">Event</a></li>
+				<li><a href="formular.html">Formular</a></li>
+				<li><a href="kulturkalendar.html">Kulturkalendar</a></li>
 				<li><a href="nyheter.html">Nyheter</a></li>
 			</ul>
 		</div>
@@ -489,7 +441,7 @@
 </div>
 <div class="mobileNav">
 	<div class="mobileNav__header">
-		<div class="mobileNav__close">STÄNG</div>
+		<a href="#" class="mobileNav__close">STÄNG</a>
 	</div>
 	<div class="mobileNav__content">
 		<div class="header_search">

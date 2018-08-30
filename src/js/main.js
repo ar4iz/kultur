@@ -5,11 +5,13 @@
 
 (function ($) {
     $(document).ready(function () {
-        $('.menuBtn__item').click(function(){
+        $('.menuBtn').click(function(e){
+            e.preventDefault();
             $('.mobileNav').addClass('active');
             $('html').addClass('hidden');
         });
-        $('.mobileNav__close').click(function(){
+        $('.mobileNav__close').click(function(e){
+            e.preventDefault();
             $('.mobileNav').removeClass('active');
             $('html').removeClass('hidden');
         });

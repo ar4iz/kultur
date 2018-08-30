@@ -1,17 +1,21 @@
 .form_tabs {
   .article_title {
     border: none;
+    padding-bottom: 22px;
   }
   h2 {
     font-size: 55px;
     font-family: $main-font;
     color: $text-color;
-    letter-spacing: -0.3px;
+    letter-spacing: -1.1px;
     text-transform: uppercase;
     line-height: 1;
   }
 }
 .formular_wrap {
+  .active_formular {
+    padding-top: 12px;
+  }
   h3 {
     color: $text-color;
     font-family: $main-font;
@@ -29,18 +33,267 @@
       font-family: $open-font;
       font-weight: 400;
       margin-right: 3px;
+      padding: 8px 19px 11px;
       &.active {
         color: $white;
         background-color: #8040bc;
       }
+      @include mobile-extra {
+        font-size: 13px;
+        margin-right: 2px;
+        padding: 8px 11px 11px;
+      }
     }
-  }
-  .tab-content {
-    border: 4px solid $text-color;
-    padding: 45px 90px;
   }
 }
 .form_steps {
-  max-width: 443px;
-  width: 100%;
+  border: 4px solid #cacaca;
+  padding: 43px 91px 27px;
+  margin-bottom: 20px;
+  @include mobile-extra {
+    padding: 25px 20px;
+  }
+  &.on_focus {
+    border: 4px solid $text-color;
+    h3 {
+      color: $text-color;
+    }
+    span {
+      color: $text-color;
+    }
+  }
+  h3 {
+    color: #717171;
+  }
+  .form_content {
+    max-width: 443px;
+    width: 100%;
+  }
+  span {
+    font-family: $open-font;
+    display: block;
+    letter-spacing: -0.5px;
+    color: #717171;
+    strong {
+      letter-spacing: -0.6px;
+    }
+    .required {
+      display: inline-block;
+    }
+  }
+  .form-group {
+    margin-bottom: 23px;
+    padding-top: 11px;
+  }
+  .form_text {
+    border: 2px solid #b4b4b4;
+    border-radius: 0;
+    height: 30px;
+    margin-top: 3px;
+    padding-left: 19px;
+    letter-spacing: -0.5px;
+    &:focus {
+      border: 2px solid $text-color;
+      box-shadow: none;
+    }
+  }
+  .number_wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mask_num {
+    max-width: 140px;
+    width: 100%;
+    @include mobile {
+      margin-right: 5px;
+    }
+  }
+  .other_num {
+    max-width: 264px;
+    width: 100%;
+  }
+  &.step_2 {
+    padding-bottom: 47px;
+    .form-group {
+      margin-bottom: 3px;
+      &.mb_lg {
+        margin-bottom: 23px;
+      }
+    }
+  }
+  &.step_3 {
+    padding-bottom: 42px;
+    .form-group {
+      margin-bottom: 3px;
+      &.mb_lg {
+        margin-bottom: 23px;
+      }
+    }
+  }
+  .add_btn {
+    padding-top: 37px;
+    .btn_dark {
+      height: 32px;
+      max-width: 194px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mobile-extra {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+.error_message {
+  color: #d53030;
+  font-family: $open-font;
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 5px;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+.success_message {
+  color: #35aa5c;
+  font-family: $open-font;
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 14px;
+  margin-left: 11px;
+  padding-left: 22px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    background: url("../img/spritesheet.png") no-repeat;
+    background-position: -53px -73px;
+    width: 21px;
+    height: 21px;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+  @include mobile-extra {
+    margin-left: 20px;
+  }
+}
+.form_footer {
+  background-color: #efebe4;
+  padding-top: 52px;
+  padding-bottom: 41px;
+  .result_content, .pay_info {
+    background-color: $white;
+  }
+  .result_content {
+    padding: 18px 30px 10px;
+    margin-bottom: 10px;
+    h3 {
+      margin-bottom: 13px;
+    }
+    p {
+      font-family: $open-font;
+      color: #404040;
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 8px;
+      margin-left: 6px;
+      padding-left: 13px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        background: url("../img/spritesheet.png") no-repeat;
+        width: 11px;
+        height: 10px;
+        background-position: -5px -29px;
+      }
+    }
+  }
+  .pay_info {
+    padding: 16px 42px 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    @include mobile-extra {
+      flex-wrap: wrap;
+      padding: 16px 30px;
+    }
+  }
+  .termins_pay {
+    p {
+      font-size: 25px;
+      font-family: $open-font;
+      font-weight: 700;
+    }
+  }
+  .termins_rights {
+    max-width: 310px;
+    width: 100%;
+    padding-top: 5px;
+    @include mobile-extra {
+      max-width: none;
+    }
+    p {
+      font-style: italic;
+      font-family: $open-font;
+      font-size: 15px;
+      color: #404040;
+      letter-spacing: -0.4px;
+      line-height: 24px;
+      strong {
+        font-style: normal;
+      }
+    }
+  }
+  .check {
+    padding-left: 33px;
+    margin-bottom: 13px;
+    @include mobile-extra {
+      padding-left: 20px;
+    }
+    .radio-custom {
+      margin-top: 2px;
+      @include mobile-extra {
+        display: flex;
+        width: 100%;
+        max-width: 19px;
+      }
+    }
+    .label {
+      padding-left: 24px;
+      font-size: 15px;
+      font-family: $open-font;
+      font-weight: 400;
+      color: #404040;
+      @include mobile-extra {
+        padding-left: 15px;
+        font-size: 14px;
+      }
+    }
+  }
+  .send_submit {
+    padding-left: 31px;
+    padding-top: 17px;
+    @include mobile {
+      padding-left: 0;
+    }
+    .btn_dark {
+      max-width: 183px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 37px;
+      font-size: 15px;
+      text-transform: uppercase;
+      @include mobile-extra {
+        margin: 0 auto;
+      }
+    }
+  }
 }

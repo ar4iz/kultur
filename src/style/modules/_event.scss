@@ -11,14 +11,16 @@
     &:before {
       @include tablet-sm {
         left: 50%;
-        background: url("../img/calendar white.png") no-repeat;
+        background: url("../img/spritesheet.png") no-repeat;
         width: 18px;
         height: 19px;
+        background-position: -50px -5px;
       }
       @include mobile {
-        background: url("../img/calendar_sm.png") no-repeat;
+        background: url("../img/spritesheet.png") no-repeat;
         width: 14px;
         height: 14px;
+        background-position: -78px -5px;
       }
     }
   }
@@ -104,6 +106,9 @@
     max-width: 180px;
     width: 100%;
     margin-right: 83px;
+    @include tablet {
+      margin-right: 33px;
+    }
     @include mobile {
       max-width: none;
       margin-right: 0;
@@ -147,7 +152,8 @@
       &:before {
         content: '';
         position: absolute;
-        background: url("../img/pin_black.png") no-repeat;
+        background: url("../img/spritesheet.png") no-repeat;
+        background-position: -84px -73px;
         width: 16px;
         height: 21px;
         top: 0;
@@ -165,7 +171,8 @@
       &:before {
         content: '';
         position: absolute;
-        background: url("../img/ticket_black.png") no-repeat;
+        background: url("../img/spritesheet.png") no-repeat;
+        background-position: -110px -82px;
         width: 24px;
         height: 22px;
         top: 10px;
@@ -319,6 +326,9 @@
       margin-right: 0;
       width: auto;
       height: auto;
+      @include tablet-sm {
+        flex: none;
+      }
     }
     .new_content {
       padding-top: 13px;
